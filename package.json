@@ -1,0 +1,15 @@
+{
+  "name": "visitor-pass-management-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MERN Visitor Pass Management System with QR passes, PDF badges, OTP verification, multi-org support, and Docker + Nginx deployment.",
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "dev:memory": "node -e \"const { spawn } = require('child_process'); const s = spawn('npm', ['--prefix', 'server', 'run', 'dev:memory'], { stdio: 'inherit', shell: true }); const c = spawn('npm', ['--prefix', 'client', 'run', 'dev'], { stdio: 'inherit', shell: true }); process.on('SIGINT', () => { s.kill(); c.kill(); process.exit(); });\"",
+    "seed": "npm --prefix server run seed",
+    "build": "npm --prefix client run build",
+    "test": "npm --prefix server test"
+  }
+}
