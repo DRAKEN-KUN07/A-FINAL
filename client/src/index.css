@@ -477,7 +477,7 @@ tbody tr:hover {
 }
 
 .modal-head {
-  padding: 18px 22px;
+  padding: 14px 20px;
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
@@ -485,7 +485,7 @@ tbody tr:hover {
 }
 
 .modal-body {
-  padding: 22px;
+  padding: 16px 20px;
 }
 
 /* Avatars */

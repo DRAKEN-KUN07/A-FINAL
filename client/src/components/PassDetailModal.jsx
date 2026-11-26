@@ -62,11 +62,11 @@ export function PassDetailModal({ pass, open, onClose }) {
           <StatusBadge value={pass.status} />
         </div>
 
-        <div style={{ padding: 20 }}>
-          <div style={{ display: 'flex', gap: 16, alignItems: 'center', marginBottom: 18 }}>
+        <div style={{ padding: 16 }}>
+          <div style={{ display: 'flex', gap: 14, alignItems: 'center', marginBottom: 14 }}>
             <Avatar name={pass.visitor?.fullName} photoUrl={pass.visitor?.photoUrl} large />
             <div style={{ flex: 1 }}>
-              <div style={{ fontSize: '1.15rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: 8 }}>
+              <div style={{ fontSize: '1.1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: 8 }}>
                 {pass.visitor?.fullName}
                 {pass.visitor?.otpVerified && (
                   <span title="OTP Verified" style={{ color: 'var(--emerald)', display: 'inline-flex' }}>
@@ -74,10 +74,10 @@ export function PassDetailModal({ pass, open, onClose }) {
                   </span>
                 )}
               </div>
-              <div style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+              <div style={{ color: 'var(--text-secondary)', fontSize: '0.88rem' }}>
                 {pass.visitor?.company || 'Independent Visitor'}
               </div>
-              <div style={{ color: 'var(--text-muted)', fontSize: '0.8rem', marginTop: 4 }}>
+              <div style={{ color: 'var(--text-muted)', fontSize: '0.8rem', marginTop: 3 }}>
                 Host: <strong>{pass.host?.name || 'Reception'}</strong>
                 {pass.host?.department ? ` (${pass.host.department})` : ''}
               </div>
@@ -88,57 +88,57 @@ export function PassDetailModal({ pass, open, onClose }) {
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-              gap: 12,
+              gap: 10,
               background: 'var(--bg-muted)',
-              padding: 14,
+              padding: 12,
               borderRadius: 10,
               border: '1px solid var(--border)',
-              marginBottom: 18,
-              fontSize: '0.84rem',
+              marginBottom: 12,
+              fontSize: '0.82rem',
             }}
           >
             <div>
-              <div style={{ color: 'var(--text-muted)', fontSize: '0.74rem', fontWeight: 600 }}>PASS CODE</div>
+              <div style={{ color: 'var(--text-muted)', fontSize: '0.72rem', fontWeight: 600 }}>PASS CODE</div>
               <div className="mono" style={{ fontWeight: 700, marginTop: 2 }}>{pass.passCode}</div>
             </div>
             <div>
-              <div style={{ color: 'var(--text-muted)', fontSize: '0.74rem', fontWeight: 600 }}>PURPOSE</div>
+              <div style={{ color: 'var(--text-muted)', fontSize: '0.72rem', fontWeight: 600 }}>PURPOSE</div>
               <div style={{ fontWeight: 600, marginTop: 2 }}>{pass.purpose}</div>
             </div>
             <div>
-              <div style={{ color: 'var(--text-muted)', fontSize: '0.74rem', fontWeight: 600 }}>VALID FROM</div>
+              <div style={{ color: 'var(--text-muted)', fontSize: '0.72rem', fontWeight: 600 }}>VALID FROM</div>
               <div style={{ marginTop: 2 }}>{new Date(pass.validFrom).toLocaleString()}</div>
             </div>
             <div>
-              <div style={{ color: 'var(--text-muted)', fontSize: '0.74rem', fontWeight: 600 }}>VALID UNTIL</div>
+              <div style={{ color: 'var(--text-muted)', fontSize: '0.72rem', fontWeight: 600 }}>VALID UNTIL</div>
               <div style={{ marginTop: 2 }}>{new Date(pass.validUntil).toLocaleString()}</div>
             </div>
           </div>
 
-          <div style={{ textAlign: 'center', padding: '12px 0' }}>
+          <div style={{ textAlign: 'center', padding: '2px 0' }}>
             {pass.qrDataUrl && (
               <img
                 src={pass.qrDataUrl}
                 alt={`QR for ${pass.passCode}`}
                 style={{
-                  width: 188,
-                  height: 188,
-                  borderRadius: 12,
+                  width: 124,
+                  height: 124,
+                  borderRadius: 10,
                   border: '1px solid var(--border)',
-                  padding: 8,
+                  padding: 5,
                   background: '#fff',
                 }}
               />
             )}
-            <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6 }}>
-              <ShieldCheck size={15} color="#0284c7" />
+            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: 4, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6 }}>
+              <ShieldCheck size={14} color="#0284c7" />
               HMAC-SHA256 Signed QR Token • Scan at security gate
             </div>
           </div>
         </div>
       </div>
 
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 18, justifyContent: 'space-between' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 14, justifyContent: 'space-between' }}>
         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
           <button type="button" className="btn btn-secondary btn-sm" onClick={() => copyText(pass.qrToken, 'QR Token')}>
             <Copy size={14} /> Copy QR Token

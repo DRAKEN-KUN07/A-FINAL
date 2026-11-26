@@ -145,3 +145,19 @@ npm test
 | **Gate Scanner** | `GET /api/checklogs`, `POST /api/checklogs/scan` |
 | **Dashboard & Export** | `GET /api/dashboard/stats`, `GET /api/dashboard/reports`, `GET /api/dashboard/export?format=csv` |
 | **Admin & Multi-Org** | `GET/POST /api/admin/users`, `GET/POST /api/admin/organizations`, `POST /api/admin/organizations/:id/locations`, `GET /api/admin/notifications`, `GET /api/admin/audit-logs` |
+
+---
+
+## Demo Video & Screenshots
+
+- **Full Walkthrough Demo Video**: [docs/demo/gatepass-demo.webm](docs/demo/gatepass-demo.webm)
+
+| Screen | Preview |
+| :--- | :--- |
+| **Login & Demo Role Selector** | ![Login Page](docs/screenshots/01-login.png) |
+| **Admin Operations & Analytics Dashboard** | ![Admin Dashboard](docs/screenshots/02-admin-dashboard.png) |
+| **Digital Pass & QR Badge Modal** | ![Digital Pass QR](docs/screenshots/03-digital-pass-qr.png) |
+| **Reports & CSV/JSON Export** | ![Reports Export](docs/screenshots/04-reports-export.png) |
+| **Security Gate QR Scanner & Check-In** | ![Security QR Scanner](docs/screenshots/05-security-qr-scanner.png) |
+| **Visitor Self-Service Portal** | ![Visitor Portal](docs/screenshots/06-visitor-portal.png) |
+
